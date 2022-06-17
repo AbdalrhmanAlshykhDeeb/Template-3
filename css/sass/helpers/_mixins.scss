@@ -4,3 +4,14 @@
     }
     #{$property}: $value;
 }
+
+@mixin back-ground($color, $opacity){
+    background-color: rgba($color, $opacity);
+}
+
+@mixin keyframe($anim-name){
+    @keyframes #{$anim-name}{
+        @content;
+    }
+
+}
