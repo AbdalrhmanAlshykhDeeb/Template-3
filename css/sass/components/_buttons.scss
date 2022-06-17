@@ -1,0 +1,90 @@
+.button-features {
+    display: block;
+    border: 3px solid transparent;
+    width: fit-content;
+    margin: 0 auto 30px;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 30px;
+    transition: $main-transition;
+    border-radius: 6px;
+}
+.button-features.quality{
+    color: #f44036;
+    border-color: #f44036;
+    background: linear-gradient(to right, #f44036 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    height: fit-content;
+}
+
+.button-features.time{
+    color: #009688;
+    border-color: #009688;
+    background: linear-gradient(to right, #009688, 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+.button-features.passion{
+    color: #1787e0;
+    border-color: #1787e0;
+    background: linear-gradient(to right, #1787e8, 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+}
+
+.button-subscribe{
+    border-radius: 50px;
+    color: white;
+    background-color: $main-color;
+    border: none;
+    font-size: 18px;
+    padding: 20px;
+    cursor: pointer;
+    transition: $main-transition;
+
+    @media (max-width: $max-mobile) {
+        border-radius: 0;
+        // border-radius: 4px;
+        // display: block;
+        // margin: 0px auto;
+        // padding: 20px 50px;
+    }
+    &:hover {
+        background-color: $main-color-alt;
+    }
+}
+
+
+
+.button-pricing{
+    display: block;
+    width: fit-content;
+    margin: 20px auto 40px;
+    color: $main-color;
+    border: 2px solid $main-color;
+    border-radius: 6px;
+    padding: 15px 20px;
+    font-weight: bold;
+    &:hover {
+        background-color: $main-color-alt;
+        border-color: $main-color-alt;
+        color: white;
+    }
+}
+
+.button-discount{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: $main-color;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    transition: $main-transition;
+    &:hover{
+        background-color: $main-color-alt;
+    }
+}

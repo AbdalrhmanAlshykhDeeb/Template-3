@@ -1,0 +1,143 @@
+.header {
+    background-color: white;
+    position: relative;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        .logo {
+            color: $main-color;
+            font-size: 26px;
+            font-weight: bold;
+            height: 72px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (max-width: $max-mobile) {
+                width: 100%;
+                height: 50px;
+            }
+        }
+        .main-nav {
+            display: flex;
+            @media (max-width: $max-mobile) {
+                margin: auto;
+            }
+            > li {
+               > a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 72px;
+                    position: relative;
+                    padding: 0 30px;
+                    color: $black-color;
+                    transition: $main-transition;
+                    overflow: hidden;
+                    font-size: 18px;
+                    @media (max-width: $max-mobile) {
+                        padding: 10px;
+                        font-size: 14px;
+                        height: 40px;
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 4px;
+                        background-color: $main-color;
+                        top: 0;
+                        left: -100%;
+                        transition: $main-transition;
+                    }
+                    &:hover::before {
+                        left: 0;
+                    }
+                    &:hover {
+                        color: $main-color;
+                        background-color: #fafafa;
+                    }
+                }
+                .mega-menu{
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    padding: 30px;
+                    background-color: white;
+                    border-bottom:3px solid $main-color;
+                    z-index: -1;
+                    display: flex;
+                    gap: 40px;
+                    top: calc(100% + 50px);
+                    transition: top $main-transition, opacity $main-transition ;
+                    opacity: 0;
+                    @media (max-width: $max-mobile){
+                        flex-direction: column;
+                        gap: 0;
+                        padding: 5px;
+                    }
+                    .image {
+                        img{
+                            max-width: 100%;
+                            @media (max-width: $max-small){
+                                display: none;
+                            }
+                        }
+                    }
+                    .links {
+                        min-width: 250px;
+                        flex: 1;
+                        li{
+                            position: relative;
+                            &:not(:last-child){
+                                border-bottom: 1px solid #e9e6e6;
+                            }
+                            &:last-child{
+                                @media (max-width: $max-mobile){
+                                    border-bottom: none;
+                                }
+                            }
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                width: 0;
+                                height: 100%;
+                                background-color: #fafafa;
+                                z-index: -1;
+                                transition: $main-transition;
+                            }
+                            &:hover::before{
+                                content: '';
+                                width: 100%;
+                            }
+                            a{
+                                display: block;
+                                color: $main-color;
+                                font-size: 18px;
+                                font-weight: bold;
+                                padding: 15px;
+                                i{
+                                    margin-inline-end: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:hover .mega-menu{
+                    opacity: 1;
+                    z-index: 50;
+                    top: calc(100% + 3px);
+                }
+            }
+        }
+    }
+}
+

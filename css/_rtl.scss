@@ -6,11 +6,18 @@ header .container .main-nav > li > a::before {
     position: absolute;
     width: 100%;
     height: 4px;
-    background-color: var(--main-color);
+    background-color: $main-color;
     top: 0;
-    transition: var(--main-transition);
+    transition: $main-transition;
     right: -100;
 }
 .header .container .main-nav > li > a:hover::before{
     right: 0;
+}
+.testimonials .container .box img {
+    left: -10px;
+}
+.team .container .box::before{
+    content: '';
+    left: 0;
 }

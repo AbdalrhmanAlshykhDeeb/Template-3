@@ -1,0 +1,89 @@
+@import 'sass/helpers/variables.scss';
+@import 'sass/helpers/mixins.scss';
+@import 'sass/helpers/function.scss';
+@import 'sass/layout/grid.scss';
+@import 'sass/components/heading.scss';
+@import 'sass/components/buttons';
+
+
+@import 'sass/pages/globals.scss';
+@import 'sass/layout/headers.scss';
+@import 'sass/pages/homepages.scss';
+@import 'sass/layout/footers.scss';
+
+
+@keyframes left-move{ // this is anmation header
+    50%{
+        left: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100%{
+        left: 0;
+        width: 51%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+@keyframes right-move{////this is anmation header
+    50%{
+        right: 0;
+        width: 12px;
+        height: 12px;
+    }
+    100%{
+        right: 0;
+        border-radius: 0;
+        width: 51%;
+        height: 100%;
+    }
+}
+
+
+@keyframes up-and-down{///img landing
+    0%, 100%{
+        top: 0;
+    }
+    50%{
+        top:-50px;
+    }
+}
+
+
+@keyframes bouncing{
+    0%, 10%, 20%, 50%, 80%, 100%{
+        transform: translateY(0);
+    }
+    40%, 60%{
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes moving-arrow{ //this is arry bottom landing
+    100%{
+        transform: translateX(10px);
+    }
+}
+@keyframes flashing{ //flahing img
+    0%, 40%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        width: 200%;
+        height:200%;
+    }
+}
+
+@keyframes change-bacground { //this is anmation discount
+
+    0%,
+    100% {
+        background-image: url('../images/discount-background1.jpg')
+    }
+
+    50% {
+        background-image: url('../images/discount-background2.jpg');
+    }
+}
+
